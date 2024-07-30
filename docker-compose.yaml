@@ -1,0 +1,10 @@
+services:
+  lobster-ask:
+    tty: false
+    build: .
+    volumes:
+      - ./app:/app
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+    ports:
+      - 8888:80
