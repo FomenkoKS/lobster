@@ -72,7 +72,7 @@ async def summarize(messages: Dict):
 async def books_describe(books: str):
     response = book_model.generate_content(f"""
                                         Вот список книг: {books}. 
-                                        Для КАЖДОЙ книги дай ответ в одно предложение - почему стоит ее почитать? 
+                                        Для КАЖДОЙ книги дай ответ в одно предложение - почему стоит ее почитать? Между описаниями добавь отступы.
                                         Если какая-то книга тебе неизвестна, так и скажи.
                                       """)
     return response.text
